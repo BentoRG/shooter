@@ -47,14 +47,16 @@
         ellipse(200, 400, 100, 90);
 
         if (i === ice) {
-            fill(255);
-            ellipse(initialX[i], initialY[i], 5, 5);
+            
+            noStroke();
+            fill(100, 200, 250);
+            ellipse(initialX[i], initialY[i], 20, 20);
 
-            initialX[i] = (x[i] - initialX[i])/10;
-            intialY[i] += 10; 
+            initialX[i] = (200 - x[i])/100;
+            initialY[i] -= 5; 
         };
 
-        if (initialY[i] >= 410) {
+        if (initialY[i] <= -20) {
             ice++;
         };
     };
